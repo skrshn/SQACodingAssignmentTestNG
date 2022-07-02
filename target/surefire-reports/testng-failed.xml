@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utils.ListenerSak"/>
+  </listeners>
+  <test thread-count="5" name="SakTest(failed)" verbose="0">
+    <classes>
+      <class name="test.Test1">
+        <methods>
+          <include name="start"/>
+          <include name="test1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- test.Test1 -->
+    </classes>
+  </test> <!-- SakTest(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

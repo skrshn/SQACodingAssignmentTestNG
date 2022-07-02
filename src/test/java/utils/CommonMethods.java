@@ -37,9 +37,9 @@ public class CommonMethods extends TestBase {
         waitForClickability(element);
         element.click();
     }
-    public static long getRandomLongNumber(){
-        return new Random().nextLong(999999999999999L);
-    }
+//    public static long getRandomLongNumber(){
+//        return new Random().nextLong(999999999999999L);
+//    }
     public static JavascriptExecutor getJSExecutor() {
         JavascriptExecutor js = (JavascriptExecutor) BrowserFactory.getDriver();
         return js;

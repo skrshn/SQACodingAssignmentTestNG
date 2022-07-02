@@ -19,7 +19,7 @@ public class Test1 extends TestBase {
 
         CommonMethods.jsScrollUp();
         CommonMethods.click(searchPage.newSearchFieldClear);
-        CommonMethods.sendText(homePage.searchField,ConfigReader.getPropertyValue("searchProduct2"));
+        CommonMethods.sendText(homePage.searchField, ConfigReader.getPropertyValue("searchProduct2"));
         CommonMethods.click(homePage.searchButton);
 
         CommonMethods.jsScrollDown();
@@ -28,13 +28,14 @@ public class Test1 extends TestBase {
 
         CommonMethods.jsScrollUp();
         CommonMethods.click(searchPage.shoppingBag);
-        Assert.assertEquals(CommonMethods.getText(CartPage.getCartPageTitleAssert("1")),productTitle1);
-        Assert.assertEquals(CommonMethods.getText(CartPage.getCartPageTitleAssert("2")),productTitle2);
+        Assert.assertEquals(CommonMethods.getText(CartPage.getCartPageTitleAssert("1")), productTitle1);
+        Assert.assertEquals(CommonMethods.getText(CartPage.getCartPageTitleAssert("2")), productTitle2);
 
         CommonMethods.jsScrollDown();
         CommonMethods.click(cartPage.discountCodeButton);
 
-        CommonMethods.sendText(cartPage.discountCodeField, String.valueOf(CommonMethods.getRandomLongNumber()));
+        CommonMethods.sendText(cartPage.discountCodeField, "123123123123123");
+        //String.valueOf(CommonMethods.getRandomLongNumber())
 
         CommonMethods.click(cartPage.applyDiscountCodeButton);
         CommonMethods.highlightText(cartPage.discountErrorMessage);
